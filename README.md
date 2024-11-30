@@ -39,21 +39,21 @@ This portfolio project is a dynamic and interactive website that highlights my a
    git clone https://github.com/YourGitHubUsername/portfolio-project.git
 
 2. Navigate to the project folder:
-   '''bash
+   ```bash
    cd portfolio-project
 
 3. Open index.html in your browser to view the portfolio.
    (For a backend-integrated portfolio)
 
 4. Install dependencies:
-
-   '''bash
-npm install
+   ```bash
+   npm install
 
 5. Run the application:
-   '''bash
-npm start
+   ```bash
+   npm start
 
+---
 
 ## 🎨 Future Enhancements **
 Integration with Google Analytics for visitor tracking.
@@ -61,6 +61,7 @@ Adding a blog section to share insights and updates.
 Implementing dark mode for better user experience.
 Enhancing animations with GSAP or Lottie Files.
 
+--- 
 
 ## 📬 Contact Me**
 Email: chandududdela0103@gmail.com

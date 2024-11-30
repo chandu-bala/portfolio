@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Preloader from "../src/Components/Pre";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Projects from "./Components/Projects/Projects";
+import Footer from "./Components/Footer";
+import Resume from "./Components/Resume/ResumeNew";
+import ScrollToTop from "./Components/ScrollToTop";
+import "./styles.css";
+import "./App.css";
+import Contact from "./Components/Contact/Contact";
 
-function App() {
+export default function App() {
+  const [load, updateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      updateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        <div className="main-content" style={{ display: 'flex', flexDirection: 'row-reverse' }}>
+          <div style={{ flexGrow: 1 }}>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/project" component={Projects} />
+              <Route path="/about" component={About} />
+              <Route path="/resume" component={Resume} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
+          </div>
+        </div>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 }
-
-export default App;

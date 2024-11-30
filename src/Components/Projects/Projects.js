@@ -5,11 +5,11 @@ import Particle from "../Particle";
 import { DiJsBadge, DiReact, DiNodejs, DiCss3, DiHtml5 } from "react-icons/di";
 import { SiRedux } from "react-icons/si";
 
-import ECommerce from "../../Assets/Projects/E-Commerce and Cart Management.jpg";
-import URLShortener from "../../Assets/Projects/URL Shortener1.jpeg";
-import BookManagement from "../../Assets/Projects/E-Book Management.jpg";
-import Internship from "../../Assets/Projects/Internship Website.jpg";
-import BloggingSite from "../../Assets/Projects/Blogging Site.jpg";
+import ECommerce from "../../Assets/Projects/Openstack.png";
+import URLShortener from "../../Assets/Projects/Air-Quality-Monitoring_system.jpg";
+import BookManagement from "../../Assets/Projects/Ultrasonic-radar.jpg";
+import Internship from "../../Assets/Projects/Enviromonitor.png";
+import BloggingSite from "../../Assets/Projects/Onwheels.png";
 
 
 
@@ -30,9 +30,9 @@ function Projects() {
 						<ProjectCard
 							imgPath={ECommerce}
 							isBlog={false}
-							title="E-Commerce and Cart Management"
-							description="Created an E-Commerce websites backend part with multiple APIs based on products, users, carts and orders. Here use JWT authentication for protected API’s and also use AWS. I Used Bcrypt for encrypting passwords. Like Amazon and Flipkart etc."
-							techstack="NodeJS | JavaScript | MongoDB | AWS S3 | Bcrypt"
+							title="Secure Webserver Deploymnt and access control in Openstack"
+							description="The project deploys a secure web server in OpenStack, leveraging its security features. It blocks ICMP (ping) requests, allows HTTP traffic, enables remote control via SSH, and secures web traffic with SSL/TLS."
+							techstack="Openstack | Apache Http Server | SSH | Cloud init Scripts | SELinux"
 							link="https://ecommerce-and-cart-management-iahwubta1-raj3028.vercel.app/"
 							git="https://github.com/Raj3028/Project-05.git"
 						/>
@@ -42,9 +42,9 @@ function Projects() {
 						<ProjectCard
 							imgPath={URLShortener}
 							isBlog={false}
-							title="URL Shortener"
-							description="In this project, we use Redis & to shorten a long URL to a short URL. Used Redis as a Caching solution for quick response time. Like Bitly and TinyURL."
-							techstack="NodeJS | JavaScript | MongoDB | Redis | Shortid"
+							title="Air Quality monitoring Sytsem"
+							description="An IoT-based air quality monitoring system uses interconnected sensors to measure pollutants like particulate matter and gases in real time, enabling proactive environmental management.."
+							techstack="Arduino | DHT11 Sensor | Blynk"
 							link="https://url-shortener-project-04-reapm8btu-raj3028.vercel.app/"
 							git="https://github.com/Raj3028/Project-04.git"
 						/>
@@ -55,8 +55,8 @@ function Projects() {
 							imgPath={BookManagement}
 							isBlog={false}
 							title="E-Book Management"
-							description="Create a books library website where users can give reviews on books. Here used JWT authentication & authorization for protected API’s. We used AWS S3 for the books cover page. Like library-management etc."
-							techstack="NodeJS | JavaScript | MongoDB | AWS S3"
+							description="Developed an affordable ultrasonic radar system for obstacle detection and navigation applications. The ultrasonic radar project detects objects with ultrasonic waves, calculates distances, and provides graphical representation."
+							techstack="Arduino IDE | Processing Software."
 							link="https://books-management-aws-project-03-9cpcwyxmm-raj3028.vercel.app/"
 							git="https://github.com/Raj3028/Project-03-AWS-Books-Management.git"
 						/>
@@ -66,9 +66,9 @@ function Projects() {
 						<ProjectCard
 							imgPath={Internship}
 							isBlog={false}
-							title="Internship Website"
-							description="Create a college or company profile where users can apply for their internship. Here users use to find suitable Internships or Jobs depending upon their skills. Like Internshala, Indeed and Naukri.com etc."
-							techstack="NodeJS | JavaScript | MongoDB"
+							title="Enviro Monitor"
+							description="Developed an application for monitoring AQI and WQI in various locations in INDIA. Geospatial Monitoring system for air and water quality index."
+							techstack="Colab | WebScrapping | "
 							link="https://open-to-intern-website-project-02-owxh7733e-raj3028.vercel.app/"
 							git="https://github.com/Raj3028/Project-02.git"
 						/>
@@ -78,9 +78,12 @@ function Projects() {
 						<ProjectCard
 							imgPath={BloggingSite}
 							isBlog={false}
-							title="Blogging Site"
-							description="Create a blog website where users can write some blogs and other users can see this blog. Here use JWT authentication for protected APIs. Like One Magazine and URBAN BEARDSMAN."
-							techstack="NodeJS | JavaScript | MongoDB"
+							title="OnWheels Centralised Management system"
+							description="This Project revolutionizes
+ vehicle maintenance, live GPS
+ tracking, enhancing customer satisfaction and operational
+ efficiency."
+							techstack="PHP | MySQL | JavaScript | Bootstrap | XAMPP"
 							link="https://blogging-site-mini-website-project-01.vercel.app/"
 							git="https://github.com/Raj3028/Project-01.git"
 						/>

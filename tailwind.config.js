@@ -5,6 +5,7 @@ module.exports = {
       colors: {
         // Define any custom colors if needed
         tertiary: '#f39c12', // Example color
+        //Include all other regarding the projects
       },
     },
   },

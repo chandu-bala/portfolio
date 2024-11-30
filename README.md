@@ -55,7 +55,7 @@ This portfolio project is a dynamic and interactive website that highlights my a
 
 ---
 
-## 🎨 Future Enhancements **
+## 🎨 Future Enhancements
 Integration with Google Analytics for visitor tracking.
 Adding a blog section to share insights and updates.
 Implementing dark mode for better user experience.
@@ -63,5 +63,5 @@ Enhancing animations with GSAP or Lottie Files.
 
 --- 
 
-## 📬 Contact Me**
+## 📬 Contact Me
 Email: chandududdela0103@gmail.com

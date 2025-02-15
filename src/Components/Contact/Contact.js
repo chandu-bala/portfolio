@@ -25,8 +25,8 @@ function Contact() {
 
     const config = {
       SecureToken: "a4587958-816e-4932-92d7-edc5eea168fb",
-      To: 'rajeshkumarsahoo006@gmail.com',
-      From: 'rajeshkumarsahoo425@gmail.com',
+      To: 'chandududdela0103@gmail.com',
+      From: 'chandududdela0103@gmail.com',
       Subject: "This is the form my PortFolio!",
       Body: "Name: " + name
         + "<br> Email: " + email
@@ -72,7 +72,7 @@ function Contact() {
                     sx={{ fontSize: 45 }}
                   />
                   <a href="tel:+918984063028" className="con-det">
-                    +91 8984063028
+                    +91 9908233847
                   </a>
                 </div>
                 <div>
@@ -82,12 +82,12 @@ function Contact() {
                     sx={{ fontSize: 45 }}
                   />
                   <a
-                    href="mailto:rajeshkumarsahoo006@gmail.com"
+                    href="mailto:chandududdela0103@gmail.com"
                     target="_blank"
                     rel="noreferrer"
                     className="con-det"
                   >
-                    rajeshkumarsahoo006@gmail.com
+                    chandududdela0103@gmail.com
                   </a>
                 </div>
                 <div>
@@ -100,54 +100,11 @@ function Contact() {
                     target="_blank"
                     className="con-det"
                   >
-                    Cuttack, Odisha
+                    Pamur , Andhra Pradesh
                   </a>
                 </div>
               </div>
-              <h1>FIND ME ON</h1>
-              <ul className="home-about-social-links">
-                <li className="social-icons">
-                  <a
-                    href="https://github.com/Raj3028"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    <AiFillGithub />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="mailto:rajeshkumarsahoo006@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    {/* <AiOutlineTwitter /> */}
-                    <AiFillMail />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://www.linkedin.com/in/raj3028/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://www.instagram.com/iamraaj404"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour home-social-icons"
-                  >
-                    <AiFillInstagram />
-                  </a>
-                </li>
-              </ul>
+              
             </Col>
           </Row>
         </Container>

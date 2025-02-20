@@ -41,7 +41,8 @@ This portfolio project is a dynamic and interactive website that highlights my a
 
 2. Navigate to the project folder:
    ```bash
-   cd portfolio-project
+   cd portfolio
+
 
 3. Open index.html in your browser to view the portfolio.
    (For a backend-integrated portfolio)

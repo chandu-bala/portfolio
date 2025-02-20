@@ -36,7 +36,8 @@ This portfolio project is a dynamic and interactive website that highlights my a
 ## 📂 **How to Run This Project**  
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/YourGitHubUsername/portfolio-project.git
+   git clone https://github.com/chandu-bala/portfolio.git
+
 
 2. Navigate to the project folder:
    ```bash

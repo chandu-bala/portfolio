@@ -69,7 +69,7 @@ function Projects() {
 							title="Enviro Monitor"
 							description="Developed an application for monitoring AQI and WQI across various Indian locations. A geospatial monitoring system integrating real-time air and water quality data visualization."
 							techstack="Colab | Web Scraping | Data Visualization"
-							link="https://open-to-intern-website-project-02-owxh7733e-raj3028.vercel.app/"
+							link="https://enviromonitor-myzmn5ndiofc2pbhzvcxbb.streamlit.app/"
 							git="https://github.com/chandu-bala/EnviroMonitor"
 						/>
 					</Col>

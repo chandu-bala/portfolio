@@ -12,6 +12,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import PlaceIcon from "@mui/icons-material/Place";
+import Fav from "./Fav";
+
 
 function Home2() {
   return (
@@ -69,6 +71,9 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
+
+        <Fav/>
+        
         <Row>
           <Col md={12} className="home-about-social">
             <h1>

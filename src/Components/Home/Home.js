@@ -37,6 +37,7 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
+      
     </section>
   );
 }

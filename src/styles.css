@@ -601,6 +601,166 @@ html {
 	padding-top: 10px !important;
 }
 
+
+/* --------- */
+/* Favourites */
+/* --------- */
+/* --------- */
+/* Favourites */
+/* --------- */
+
+.fav-section {
+	position: relative !important;
+	padding-top: 150px !important;
+	padding-bottom: 30px !important;
+	/* background-image: var(--section-background-color) !important; */
+}
+
+/* Same heading style as Projects */
+.project-subheading {
+	color: white !important;
+	font-size: 1.9em !important;
+	font-weight: 500 !important;
+	text-align: center !important;
+	margin-bottom: 30px !important;
+}
+
+/* Card wrapper spacing */
+.fav-card {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	height: 100% !important;
+}
+
+/* Card view → cloned from .project-card-view */
+.fav-card {
+	box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+	color: white !important;
+	background-color: transparent !important;
+	opacity: 0.9 !important;
+	transition: all 0.5s ease 0s !important;
+	border-radius: 5px !important;
+}
+
+.fav-card:hover {
+	transform: scale(1.02) !important;
+	overflow: hidden !important;
+	box-shadow: 0 4px 4px 5px rgba(119, 53, 136, 0.459) !important;
+}
+
+/* Images — same feel as project images */
+.fav-card img {
+	padding: 1px !important;
+	opacity: 0.85 !important;
+	border-radius: 1px !important;
+	height: 230px !important;
+	object-fit: cover !important;
+}
+
+/* Text spacing */
+.fav-card .card-title {
+	font-size: 1.2em !important;
+	font-weight: 600 !important;
+	margin-top: 10px !important;
+}
+
+.fav-card .card-text {
+	font-size: 0.95em !important;
+	line-height: 1.6 !important;
+}
+/* Remove bootstrap card border completely */
+.fav-card {
+  border: none !important;
+}
+
+/* Extra safety: remove internal separators */
+.fav-card .card-body {
+  border-top: none !important;
+}
+
+/* Also remove image border */
+.fav-card img {
+  border-bottom: none !important;
+}
+/* When Fav is inside Home/About */
+.home-about-section .fav-section {
+  padding-top: 60px !important;   /* instead of 150px */
+}
+
+
+/* --- STORY __*/
+/* ---------- */
+/* Story Card Hover Effect */
+/* ---------- */
+
+.story-card {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Image wrapper */
+.story-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+/* Image */
+.story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Overlay (hidden initially) */
+.story-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(20, 10, 40, 0.85); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Description */
+.story-desc {
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* Link */
+.story-link {
+  color: #9f7aea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.story-link:hover {
+  text-decoration: underline;
+  color: #c3a6ff;
+  opacity: 10;
+  transparency: 0.8;
+}
+
+/* Hover effects */
+.story-card:hover .story-overlay {
+  opacity: 1;
+}
+
+.story-card:hover .story-img {
+  transform: scale(1.08);
+}
+
+
 /* --------- */
 /* About */
 /* --------- */
@@ -827,4 +987,57 @@ html {
 	box-shadow: 0 0 15px #87209e;
 	text-shadow: 0 0 2px #87209e;
 	cursor: pointer;
+}
+.fav-card img {
+  border-bottom: 1px solid #6c63ff;
+}
+
+.fav-card:hover {
+  transform: translateY(-6px);
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.resume-stat {
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  margin: 5px;
+}
+
+.resume-stat h3 {
+  color: #a855f7;
+  font-size: 32px;
+  margin-bottom: 5px;
 }

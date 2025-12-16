@@ -71,7 +71,7 @@ function Contact() {
                     className="con_ico"
                     sx={{ fontSize: 45 }}
                   />
-                  <a href="tel:+918984063028" className="con-det">
+                  <a href="tel:+919908233847" className="con-det">
                     +91 9908233847
                   </a>
                 </div>
@@ -96,7 +96,7 @@ function Contact() {
                     className="con_ico"
                     sx={{ fontSize: 45 }}
                   />
-                  <a href="https://goo.gl/maps/C8iTcLjfHfh86Loa8"
+                  <a href="https://maps.app.goo.gl/x8ApZ2P6Ehsf75P56"
                     target="_blank"
                     className="con-det"
                   >

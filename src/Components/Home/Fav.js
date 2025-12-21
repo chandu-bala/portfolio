@@ -1,5 +1,7 @@
-import React from "react";
+// import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import React, { useEffect, useRef, useState } from "react";
+
 
 
 function Fav() {
@@ -54,9 +56,49 @@ function Fav() {
   }
 ];
 
+const [animate, setAnimate] = useState(false);
+const favRef = useRef(null);
+
+useEffect(() => {
+  let hasScrolled = false;
+
+  const onScroll = () => {
+    hasScrolled = true;
+    window.removeEventListener("scroll", onScroll);
+  };
+
+  window.addEventListener("scroll", onScroll);
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting && hasScrolled) {
+        setAnimate(true);
+      }
+    },
+    {
+      threshold: 0.3, // trigger when 30% visible
+    }
+  );
+
+  if (favRef.current) {
+    observer.observe(favRef.current);
+  }
+
+  return () => {
+    window.removeEventListener("scroll", onScroll);
+    observer.disconnect();
+  };
+}, []);
+
 
   return (
-    <Container fluid className="fav-section" id="favourites">
+    <Container
+  ref={favRef}
+  fluid
+  className={`fav-section ${animate ? "fav-animate" : ""}`}
+  id="favourites"
+>
+
       <Container>
         <h1 className="project-heading" style={{fontSize: "2.6em"}}>
           THINGS I <strong className="purple">LOVE</strong>
@@ -69,7 +111,8 @@ function Fav() {
 
         <Row>
           {characters.map((char, index) => (
-            <Col md={4} key={index} className="mb-4">
+            <Col md={4} key={index} className={`mb-4 fav-card-animate delay-${index}`}>
+
               <Card className="fav-card h-100">
                 <Card.Img
                   variant="top"
@@ -87,13 +130,20 @@ function Fav() {
         </Row>
 
         {/* FAVOURITE STORIES */}
-        <h2 className="project-subheading" style={{ marginTop: "40px" }}>
+        <h2 className="project-subheading fav-stories-heading" style={{ marginTop: "40px" }}>
+
           Favourite <span className="purple">Stories</span>
         </h2>
 
         <Row className="justify-content-center">
   {stories.map((story, index) => (
-    <Col md={4} sm={6} key={index} className="mb-4 d-flex">
+    <Col
+  md={4}
+  sm={6}
+  key={index}
+  className={`mb-4 d-flex story-card-animate story-${index % 3}`}
+>
+
       <Card className="fav-card story-card h-100 w-100">
 
         {/* IMAGE */}

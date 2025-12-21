@@ -1,7 +1,11 @@
-import React from "react";
+// import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import React, { useEffect, useRef, useState } from "react";
+
+
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
+import "../../styles.css";
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -16,56 +20,92 @@ import Fav from "./Fav";
 
 
 function Home2() {
+  const [animate, setAnimate] = useState(false);
+  const sectionRef = useRef(null);
+  const hasAnimatedRef = useRef(false);
+
+
+  // const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setAnimate(true);
+      } else {
+        setAnimate(false); // 👈 THIS IS REQUIRED FOR REPLAY
+      }
+    },
+    {
+      threshold: 0.15, // mobile-friendly
+    }
+  );
+
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
+
+  return () => observer.disconnect();
+}, []);
+
+
+
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container
+      ref={sectionRef}
+      fluid
+      className={`home-about-section ${animate ? "about-animate" : ""}`}
+      id="about"
+    >
+
+
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
+            <h1 style={{ fontSize: "2.6em" }} className="about-title-animate">
               LET ME <span className="purple"> INTRODUCE </span> MYSELF...
             </h1>
-            <p className="home-about-body">
-              I've completed my B-Tech at Sathyabama University, Chennai.
-              <br />
-              But now I fell in love 😊 with programming and I have at least learnt
-              something, I think… ¯\_(ツ)_/¯
-              <br />
-              My professional interests extend to 
-              <i>
-                <b className="purple"> cloud computing, IoT technology, and machine learning </b>
-              </i>
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.</b>
-              </i>
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> JavaScript, NodeJS, GIT, ReactJS, ExpressJS, MongoDB, MySQL.</b>
-              </i>
-              <br />
-              <br />
-              I am fluent in programming languages such as &nbsp;
-              <b className="purple">Python, Java, and C++</b>, {" "} Currently learning and working with Java frameworks:
-              <i>
-                <b className="purple"> Spring, Spring Boot, Hibernate.</b>
-                </i> 
-              <br />
-              <br />
-              
-              Passionate about learning new technologies and driven to secure a deep understanding and mastery in the field.
-            </p>
+              <p className="home-about-body about-text-animate">
+                <span>I've completed my B-Tech at Sathyabama University, Chennai.</span><br />
+
+                <span>
+                  But now I fell in love 😊 with programming and I have at least learnt
+                  something, I think… ¯\_(ツ)_/¯
+                </span>
+
+                <span>
+                  My professional interests extend to
+                  <b className="purple"> cloud computing, IoT technology, and machine learning</b>.
+                </span>
+
+                <span>
+                  Whenever possible, I also apply my passion for developing products with
+                  <b className="purple"> Node.js</b> and
+                  <b className="purple"> modern JavaScript libraries like React</b>.
+                </span><br />
+
+                <span>
+                  I am fluent in classics like
+                  <b className="purple">
+                    JavaScript, NodeJS, GIT, ReactJS, ExpressJS, MongoDB, MySQL
+                  </b>.
+                </span>
+
+                <span>
+                  I am fluent in programming languages such as
+                  <b className="purple"> Python, Java, and C++</b>. Currently learning
+                  <b className="purple"> Spring, Spring Boot, Hibernate</b>.
+                </span><br />
+
+                <span>
+                  Passionate about learning new technologies and driven to secure deep mastery.
+                </span>
+              </p>
+
+
 
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col md={4} className="myAvtar about-image-animate">
+
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>

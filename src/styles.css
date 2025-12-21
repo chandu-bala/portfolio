@@ -541,6 +541,59 @@ html {
 	color: #cd5ff8;
 }
 
+.home-text-animate {
+  opacity: 0;
+  animation: textUp 1s ease-out forwards;
+}
+
+.home-text-animate.delay-1 {
+  animation-delay: 0.3s;
+}
+
+@keyframes textUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-type-animate {
+  opacity: 0;
+  animation: typeFadeUp 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes typeFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-image-animate {
+  opacity: 0;
+  animation: imageSlideIn 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes imageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 .Typewriter__wrapper {
 	font-size: 2.2em !important;
 	color: #be6adf !important;

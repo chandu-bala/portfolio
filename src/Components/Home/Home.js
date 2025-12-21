@@ -8,15 +8,22 @@ import Type from "./Type";
 import { FaCode, FaGithub, FaUser } from "react-icons/fa";
 
 function Home() {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(() => {
+    return !sessionStorage.getItem("introShown");
+  });
+
 
   useEffect(() => {
+  if (showIntro) {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 3000); // total intro duration
+      sessionStorage.setItem("introShown", "true");
+    }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }
+}, [showIntro]);
+
 
   // 🔥 INTRO POPUP
   if (showIntro) {
@@ -51,24 +58,32 @@ function Home() {
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <h1 className="heading">
+              <h1 className="heading-name home-text-animate delay-1">
+
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
-              <h1 className="heading-name">
+              <h1 className="heading-name home-text-animate delay-1">
+
                 I'M <strong className="main-name">DUDDELA BALA CHANDU</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50, textAlign: "left" }} className="home-type-animate">
                 <Type />
               </div>
+
             </Col>
 
             <Col md={5}>
-              <img src={homeLogo} alt="home pic" className="img-fluid" />
+              <img
+                src={homeLogo}
+                alt="home pic"
+                className="img-fluid home-image-animate"
+              />
+
             </Col>
           </Row>
         </Container>

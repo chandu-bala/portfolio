@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100%;
+    height: 120%;
     position: relative;
     margin-right: 20px;
 }
@@ -122,4 +122,59 @@
 .view-project-btn:hover {
   background-color: #b562d6;
   color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* INITIAL STATE */
+.line-segment,
+.experience-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* TIMELINE DRAW */
+.exp-animate .line-segment {
+  animation: lineGrow 0.6s ease forwards;
+}
+
+.exp-animate .line-segment:nth-child(1) { animation-delay: 0.1s; }
+.exp-animate .line-segment:nth-child(2) { animation-delay: 0.25s; }
+.exp-animate .line-segment:nth-child(3) { animation-delay: 0.4s; }
+.exp-animate .line-segment:nth-child(4) { animation-delay: 0.55s; }
+
+@keyframes lineGrow {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 65px;
+  }
+}
+
+/* PERIOD FADE-UP */
+.exp-animate .experience-item {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.exp-animate .experience-item:nth-child(1) { animation-delay: 0.3s; }
+.exp-animate .experience-item:nth-child(2) { animation-delay: 0.45s; }
+.exp-animate .experience-item:nth-child(3) { animation-delay: 0.6s; }
+.exp-animate .experience-item:nth-child(4) { animation-delay: 0.75s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { experiences } from "../About/experiences";
 import "./Experience.css";
 import { FiExternalLink } from "react-icons/fi";
 
 function Experience() {
-  const [hoveredIndex, setHoveredIndex] = React.useState(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(null);
+   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [inView, setInView] = useState(false);
+  const sectionRef = useRef(null);
+  
 
   // Decide which item to show
   const activeIndex =
     hoveredIndex !== null ? hoveredIndex : selectedIndex;
 
+   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true);
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="experience-container">
+    <div
+  ref={sectionRef}
+  className={`experience-container ${inView ? "exp-animate" : ""}`}
+>
+
       {/* TIMELINE */}
       <div className="experience-timeline">
         <div className="line-wrapper">

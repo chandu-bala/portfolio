@@ -22,7 +22,10 @@ import Fav from "./Fav";
 function Home2() {
   const [animate, setAnimate] = useState(false);
   const sectionRef = useRef(null);
-  const hasAnimatedRef = useRef(false);
+  // const hasAnimatedRef = useRef(false);
+  const [footerAnimate, setFooterAnimate] = useState(false);
+const footerRef = useRef(null);
+
 
 
   // const [animate, setAnimate] = useState(false);
@@ -46,6 +49,28 @@ function Home2() {
 
   return () => observer.disconnect();
 }, []);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setFooterAnimate(true);
+      } else {
+        setFooterAnimate(false); // replay on re-scroll (optional)
+      }
+    },
+    {
+      threshold: 0.25,
+    }
+  );
+
+  if (footerRef.current) {
+    observer.observe(footerRef.current);
+  }
+
+  return () => observer.disconnect();
+}, []);
+
 
 
 
@@ -114,8 +139,12 @@ function Home2() {
 
         <Fav/>
         
-        <Row>
+        <Row
+          ref={footerRef}
+          className={`footer-section ${footerAnimate ? "footer-animate" : ""}`}
+          >
           <Col md={12} className="home-about-social">
+
             <h1>
               Feel free to <span className="purple">Connect </span>with me
             </h1>

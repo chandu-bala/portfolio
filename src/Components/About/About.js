@@ -54,14 +54,24 @@ function About() {
           </Col>
         </Row>
 
+        
+        <h1 className="section-title"><strong className="purple">Experience</strong> I Gained</h1>
+        <br/>
+        <Experience />
+        <br/>
+
+
+
+<br/>
+<br/>
+
+<br/>
         <h1 className="section-title">Professional <strong className="purple">Skillset</strong></h1>
         <Techstack />
 
         <h1 className="section-title"><strong className="purple">Tools</strong> I use</h1>
         <Toolstack />
 
-        <h1 className="section-title"><strong className="purple">Experience</strong> I Gained</h1>
-        <Experience />
       </Container>
     </Container>
   );

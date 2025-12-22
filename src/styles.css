@@ -708,6 +708,13 @@ html {
 	color: #700c86 !important;
 }
 
+/* ===== ABOUT SECTION DEFAULT (HIDDEN BEFORE VIEW) ===== */
+
+.about-title-animate,
+.about-text-animate span,
+.about-image-animate {
+  opacity: 0;
+}
 
 
 .about-animate .about-title-animate {

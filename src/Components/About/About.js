@@ -6,6 +6,7 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import Experience from "./Experience";
+import Achievements from "./Achievements";
 import "../../styles.css";
 
 function About() {
@@ -71,6 +72,9 @@ function About() {
 
         <h1 className="section-title"><strong className="purple">Tools</strong> I use</h1>
         <Toolstack />
+
+        <h1 className="section-title">My <strong className="purple">Acheivements </strong></h1>
+        <Achievements />
 
       </Container>
     </Container>

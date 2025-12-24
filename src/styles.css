@@ -1383,7 +1383,85 @@ html {
 
 
 /*-------------*/
-/* About card techstack */
+/* About card Acheivements*/
+/* ===== Coverflow Achievements ===== */
+
+.achievement-wrapper {
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+.achievement-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.achievement-item img {
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.6s ease;
+}
+
+
+/* Center image */
+.achievement-item.active img {
+  width: 560px;      /* ⬅ increase width */
+  height: 400px; 
+  opacity: 1;
+}
+
+/* Side images */
+.achievement-item.inactive img {
+  width: 200px;
+  height: 150px;
+  opacity: 0.25;
+}
+
+/* Arrows */
+.nav-arrow {
+  position: absolute;
+  top: 42%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.nav-arrow.left {
+  left: 5%;
+}
+
+.nav-arrow.right {
+  right: 5%;
+}
+
+.nav-arrow:hover {
+  background: rgba(128, 90, 213, 0.9);
+}
+
+/* Text */
+.achievement-title {
+  margin-top: 25px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.achievement-desc {
+  max-width: 720px;
+  margin: 10px auto;
+  font-size: 15px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+
 
 /* --------- */
 /* Resume */

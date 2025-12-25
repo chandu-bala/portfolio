@@ -33,6 +33,14 @@ import PWCIP from "../../Assets/Certifications/Courseera-PWCIP.jpg";
 import udemy from "../../Assets/Certifications/udemycert_page-0001.jpg";
 
 
+// Skills Icons
+// Category Icons
+import {FaCode,FaLaptopCode,FaCloud,FaMicrochip,FaBrain,FaTools} from "react-icons/fa";
+
+// Skill Icons
+import {SiJava,SiPython,SiCplusplus,SiMysql,SiHtml5,SiCss3,SiJavascript,SiReact,SiNodedotjs,SiAmazonaws,SiGooglecloud,SiLinux,SiArduino,SiEclipsemosquitto ,SiGit,SiGithub,SiVisualstudiocode,SiPostman,SiPandas,SiNumpy,SiScikitlearn,SiXgboost} from "react-icons/si";
+
+
 function Projects() {
   const [activeTab, setActiveTab] = useState("projects");
 
@@ -278,18 +286,102 @@ function Projects() {
 )}
 
 
-
-
-
-
 {activeTab === "skills" && (
-  <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-    <Col md={3} className="skill-card">Java</Col>
-    <Col md={3} className="skill-card">Python</Col>
-    <Col md={3} className="skill-card">IoT & Embedded</Col>
-    <Col md={3} className="skill-card">Cloud & DevOps</Col>
+  <Row className="skill-row" style={{ justifyContent: "center" }}>
+
+    {/* Programming */}
+    <Col md={6} sm={12} className="skill-card-col">
+      <div className="skill-card">
+        <h5><FaCode className="skill-icon" /> Programming & Core CS</h5>
+        <div className="skill-tags">
+          <span><SiJava /> Java</span>
+          <span><SiPython /> Python</span>
+          <span><SiCplusplus /> C / C++</span>
+          <span><SiMysql /> SQL</span>
+          <span><FaBrain /> DSA</span>
+          <span><FaCode /> OOP</span>
+        </div>
+      </div>
+    </Col>
+
+    {/* Web */}
+    <Col md={6} sm={12} className="skill-card-col">
+      <div className="skill-card">
+        <h5><FaLaptopCode className="skill-icon" /> Web & Full Stack</h5>
+        <div className="skill-tags">
+          <span><SiHtml5 /> HTML</span>
+          <span><SiCss3 /> CSS</span>
+          <span><SiJavascript /> JavaScript</span>
+          <span><SiReact /> React</span>
+          <span><SiNodedotjs /> Node.js</span>
+          <span><FaCode /> REST APIs</span>
+        </div>
+      </div>
+    </Col>
+
+    {/* Cloud */}
+    <Col md={6} sm={12} className="skill-card-col">
+      <div className="skill-card">
+        <h5><FaCloud className="skill-icon" /> Cloud & Platforms</h5>
+        <div className="skill-tags">
+          <span><SiAmazonaws /> AWS</span>
+          <span><FaCloud /> OpenStack</span>
+          <span><SiGooglecloud /> Google Cloud</span>
+          <span><SiLinux /> Linux</span>
+          <span><FaCloud /> Virtualization</span>
+        </div>
+      </div>
+    </Col>
+
+    {/* IoT */}
+    <Col md={6} sm={12} className="skill-card-col">
+      <div className="skill-card">
+        <h5><FaMicrochip className="skill-icon" /> IoT & Embedded</h5>
+        <div className="skill-tags">
+          <span><FaMicrochip /> ESP32</span>
+          <span><SiArduino /> Arduino</span>
+          <span><SiEclipsemosquitto /> MQTT</span>
+          <span><FaMicrochip /> EMQX</span>
+          <span><FaMicrochip /> Sensors</span>
+        </div>
+      </div>
+    </Col>
+
+    {/* AI / ML */}
+    <Col md={6} sm={12} className="skill-card-col">
+      <div className="skill-card">
+        <h5><FaBrain className="skill-icon" /> Data, ML & AI</h5>
+        <div className="skill-tags">
+          <span><SiPandas /> Pandas</span>
+          <span><SiNumpy /> NumPy</span>
+          <span><SiScikitlearn /> Scikit-learn</span>
+          <span><FaBrain /> XGBoost</span>
+          <span><FaBrain /> Data Viz</span>
+          <span><FaBrain /> LLMs</span>
+        </div>
+      </div>
+    </Col>
+
+    {/* Tools */}
+    <Col md={6} sm={12} className="skill-card-col">
+      <div className="skill-card">
+        <h5><FaTools className="skill-icon" /> Tools & Practices</h5>
+        <div className="skill-tags">
+          <span><SiGit /> Git</span>
+          <span><SiGithub /> GitHub</span>
+          <span><SiVisualstudiocode /> VS Code</span>
+          <span><SiPostman /> Postman</span>
+          <span><FaTools /> Agile</span>
+          <span><FaTools /> Debugging</span>
+        </div>
+      </div>
+    </Col>
+
   </Row>
 )}
+
+
+
 
       </Container>
     </Container>

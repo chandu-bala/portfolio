@@ -51,7 +51,7 @@ function Projects() {
         <h1 className="Project-heading" style={{ color: "white" }}>
           My Recent <strong className="purple">Works </strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <p style={{ color: "#cfcfcf", maxWidth: "700px", margin: "0 auto", textAlign: "center"  }}>
           Explore my journey through projects, Cerftifications, and hackathons Each section highlights my skills and dedication to continuous learning.
         </p>
        <div className="project-tabs-bar">

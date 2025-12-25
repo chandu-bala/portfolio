@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+import "../../styles.css";
 
 import OpenStack from "../../Assets/Projects/Openstack.png";
 import AirQualitySys from "../../Assets/Projects/Air-Quality-Monitoring_system.jpg";
@@ -17,20 +19,63 @@ import FileSureImg from "../../Assets/Projects/filesure.png";
 import Tech4SholaImg from "../../Assets/Projects/tech4shola.png";
 import JavaImg from "../../Assets/Projects/java-project.png";
 
+//Icons
+import { FiFolder, FiAward, FiTool } from "react-icons/fi";
+//Certifications 
+import CertificationCard from "./CertificationCard";
+
+//Certification Images
+import PWC from "../../Assets/Certifications/Bala Chandu-PWC-Cert_page-0001.jpg";
+import CDAC from "../../Assets/Certifications/CDAC-Certificate_Bala Chandu_page-0001.jpg";
+import nptel from "../../Assets/Certifications/Chandu  nptel_page-0001.jpg";
+import IDT from "../../Assets/Certifications/Courseera-IDT.jpg";
+import PWCIP from "../../Assets/Certifications/Courseera-PWCIP.jpg";
+import udemy from "../../Assets/Certifications/udemycert_page-0001.jpg";
+
 
 function Projects() {
+  const [activeTab, setActiveTab] = useState("projects");
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="Project-heading" style={{ color: "white" }}>
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Explore my journey through projects, Cerftifications, and hackathons Each section highlights my skills and dedication to continuous learning.
         </p>
+       <div className="project-tabs-bar">
+  <div
+  className={`tab-item ${activeTab === "projects" ? "active" : ""}`}
+  onClick={() => setActiveTab("projects")}
+>
+  <FiFolder className="tab-icon" />
+  Projects
+</div>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+  <div
+    className={`tab-item ${activeTab === "certifications" ? "active" : ""}`}
+    onClick={() => setActiveTab("certifications")}
+  >
+    <FiAward className="tab-icon" />
+    Certifications
+  </div>
+
+  <div
+    className={`tab-item ${activeTab === "skills" ? "active" : ""}`}
+    onClick={() => setActiveTab("skills")}
+  >
+    <FiTool className="tab-icon" />
+    Skills
+  </div>
+</div>
+
+        
+        {activeTab === "projects" && (
+  <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
           {/* Existing Projects */}
 
@@ -168,7 +213,84 @@ function Projects() {
 
           
 
-        </Row>
+          </Row>
+)}
+
+
+{activeTab === "certifications" && (
+  <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+    <Col md={4} className="project-card">
+      <CertificationCard
+        title="Salesforce Launchpad Program"
+        issuer="PwC "
+        image={PWC}
+        description="Successfully completed the Salesforce Launchpad Program conducted by PwC ACs in India, focusing on enterprise Salesforce fundamentals and industry-aligned training."
+      />
+    </Col>
+
+    <Col md={4} className="project-card">
+      <CertificationCard
+        title="Cloud Computing Technology (Bridge Course)"
+        issuer="C-DAC | MeitY | NIELIT"
+        image={CDAC}
+        description="Completed a government-certified bridge course in Cloud Computing Technology under the Futureskills PRIME program, organized by C-DAC Chennai and the Ministry of Electronics & IT."
+      />
+    </Col>
+
+    <Col md={4} className="project-card">
+      <CertificationCard
+        title="Cloud Computing"
+        issuer="NPTEL | IIT Kharagpur"
+        image={nptel}
+        description="Achieved Elite certification in Cloud Computing through NPTEL, funded by the Ministry of Education, with a consolidated score of 75%."
+      />
+    </Col>
+
+    <Col md={4} className="project-card">
+      <CertificationCard
+        title="Introduction to Digital Transformation"
+        issuer="Siemens | Coursera"
+        image={IDT}
+        description="Completed an online non-credit course authorized by Siemens, covering core concepts of digital transformation and modern industrial technologies."
+      />
+    </Col>
+
+    <Col md={4} className="project-card">
+      <CertificationCard
+        title="Programming with Cloud IoT Platforms"
+        issuer="POSTECH | Coursera"
+        image={PWCIP}
+        description="Completed a specialized course authorized by POSTECH, focusing on programming and application development using cloud-based IoT platforms."
+      />
+    </Col>
+
+    <Col md={4} className="project-card">
+      <CertificationCard
+        title="C++ Complete Training for Beginners"
+        issuer="Udemy"
+        image={udemy}
+        description="Completed hands-on C++ training covering core programming concepts, syntax, and beginner-level problem solving."
+      />
+    </Col>
+
+  </Row>
+)}
+
+
+
+
+
+
+{activeTab === "skills" && (
+  <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+    <Col md={3} className="skill-card">Java</Col>
+    <Col md={3} className="skill-card">Python</Col>
+    <Col md={3} className="skill-card">IoT & Embedded</Col>
+    <Col md={3} className="skill-card">Cloud & DevOps</Col>
+  </Row>
+)}
+
       </Container>
     </Container>
   );

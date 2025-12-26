@@ -48,13 +48,22 @@ function Projects() {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="Project-heading" style={{ color: "white" }}>
-          My Recent <strong className="purple">Works </strong>
-        </h1>
-        <p style={{ color: "#cfcfcf", maxWidth: "700px", margin: "0 auto", textAlign: "center"  }}>
-          Explore my journey through projects, Cerftifications, and hackathons Each section highlights my skills and dedication to continuous learning.
-        </p>
-       <div className="project-tabs-bar">
+        <h1 className="Project-heading projects-title-animate" style={{
+     color: "white"}}>
+  My Recent <strong className="purple">Works </strong>
+</h1>
+
+<p className="projects-desc-animate"
+   style={{
+     color: "#cfcfcf",
+     maxWidth: "700px",
+     margin: "0 auto",
+     textAlign: "center"
+   }}>
+  Explore my journey through projects, certifications, and hackathons.
+  Each section highlights my skills and dedication to continuous learning.
+</p>
+       <div className="project-tabs-bar projects-tabs-animate">
   <div
   className={`tab-item ${activeTab === "projects" ? "active" : ""}`}
   onClick={() => setActiveTab("projects")}

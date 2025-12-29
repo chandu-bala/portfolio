@@ -18,6 +18,8 @@ import TrelloImg from "../../Assets/Projects/Trello.jpg";
 import FileSureImg from "../../Assets/Projects/filesure.png";
 import Tech4SholaImg from "../../Assets/Projects/tech4shola.png";
 import JavaImg from "../../Assets/Projects/java-project.png";
+import NovaMindImg from "../../Assets/Projects/Novamind-project.jpg";
+
 
 //Icons
 import { FiFolder, FiAward, FiTool } from "react-icons/fi";
@@ -215,6 +217,19 @@ function Projects() {
               git="https://github.com/chandu-bala/Filesure-referral-system"
             />
           </Col>
+          {/* ✅ NEW PROJECT - NOVAMIND AI */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={NovaMindImg}
+              isBlog={false}
+              title="NovaMind-AI – AI-Powered Project & Career Mentorship Platform"
+              description="Cloud-native AI mentorship platform that transforms raw ideas into structured project plans, personalized learning roadmaps, and actionable career guidance using Google Vertex AI (Gemini). Built for the Code Vipassana & Project Sadhana Marathon."
+              techstack="Node.js | Express | Google Vertex AI (Gemini) | Firestore | Docker | Cloud Run | HTML | Bootstrap"
+              link="https://github.com/chandu-bala/NovaMind-AI"
+              git="https://github.com/chandu-bala/NovaMind-AI"
+            />
+          </Col>
+
 
           <Col md={4} className="project-card">
 			<ProjectCard
